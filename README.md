@@ -42,3 +42,10 @@ string.xml
 ```
 strings에 문자열을 html로 넣어서 읽을 수 있다. @Preview 미리보기를 사용하기 위해 함수의 매개변수에 기본 값으로 이름을 넣어주었다.
 ```
+## 컴포즈의 미리보기 기능
+![image](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/df72c0dc-3901-49ac-9565-9cc681dc5081)
+```
+SetContent 에서 Hello 함수와 Greeting 함수 중 Hello만 넣고 기기를 실행하면 실제 에뮬레이터에는 Hello 함수만 실행되어 보이지만
+미리보기 화면에서는 Hello와 Greeting이 모두 보이는 것을 알 수 있다.
+```
+
