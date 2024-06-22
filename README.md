@@ -139,7 +139,14 @@ Preview 어노테이션에 showBackground 속성과 backgroundColor 속성을 �
 widthDp와 heightDp 속성값을 이용하여 미리 보기의 면적을 지정할 수 있다. (.dp는 생략, 밀도 독립 픽셀)
 ```
 
-
+## 미리 보기 그룹화
+![image](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/05966aa4-8971-4f2a-bc1c-4f584a60bbea)
+```kotlin
+@Preview(group = "my-group-1")
+```
+```
+미리 보기를 그룹화(컴포저블 함수에 네이밍)하여 미리보기에서 보이게 할지 안 보이게 할지 설정할 수 있다.
+```
 
 
 
