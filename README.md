@@ -131,7 +131,7 @@ Column은 Row(가로)와 마찬가지로 컴포저블 요소의 위치 상태를
 ```
 Preview 어노테이션에 showBackground 속성과 backgroundColor 속성을 이용하여 미리보기의 배경색을 설정할 수 있다.
 ```
-![image](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/04e968f9-a3f9-4a4a-843b-0b4f71df6142)
+![image](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/55ad1dec-9a93-49f9-ad76-cce5ec4d970d)
 ```kotlin
 @Preview(widthDp = 100, heightDp = 100)
 ```
