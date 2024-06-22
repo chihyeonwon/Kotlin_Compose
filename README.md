@@ -94,8 +94,35 @@ Row안에 여러 컴포저블 함수를 배치한다.
 ```
 Row 안에 Button 컴포저블 함수를 추가했다. 버튼을 클릭하면 nameEntered의 값의 상태를 true로 변경한다.
 ```
-
-
+![2024-06-22 11;26;12](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/9b7e96f6-d5f0-458e-b959-b2045689fe03)
+```kotlin
+@Composable
+fun Hello() {
+    val name = remember { mutableStateOf("") } // 상태 생성: mutableStateOf 상태 기억: remember
+    val nameEntered = remember { mutableStateOf(false) }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        if (nameEntered.value) {
+            Greeting(name.value)
+        } else {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Welcome()
+                TextAndButton(name, nameEntered)
+            }
+        }
+    }
+}
+```
+```
+mutableStateOf 는 상태를 생성하고 remember는 상태를 기억한다.
+Column은 Row(가로)와 마찬가지로 컴포저블 요소의 위치 상태를 세로로 결정한다.
+위 코드를 실행하면 nameEntered.value가 true라면 Greeting의 매개변수로 전달한다. (TextButton 클릭 시 true로 변경됨)
+버튼 클릭 하기 전에는 Welcome와 TextAndButton을 실행한다.
+```
 
 
 
