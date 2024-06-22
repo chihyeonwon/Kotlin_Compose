@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Welcome()
+            Greeting()
         }
     }
 }
@@ -55,4 +56,30 @@ fun Greeting(name: String = "원치현") {
         textAlign = TextAlign.Center,
         style = MaterialTheme.typography.titleMedium
     )
+}
+
+@Composable
+fun TextAndButton(name: MutableState<String>, nameEntered: MutableState<Boolean>) {
+    Row(modifier = Modifier.padding(top = 8.dp)) {
+        TextField(
+            value = name.value,
+            onValueChange = {
+                name.value = it
+            },
+            placeholder = {
+                Text(text = stringResource(id = R.string.hint))
+            },
+            modifier = Modifier
+                .alignByBaseline()
+                .weight(1.0F),
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(
+                autoCorrect = false,
+                capitalization = KeyboardCapitalization.Words,
+            ),
+            keyboardActions = KeyboardActions(onAny = {
+                nameEntered.value = true
+            })
+        )
+    }
 }
