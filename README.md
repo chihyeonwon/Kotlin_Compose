@@ -1,4 +1,3 @@
-# Chapter 1: Building your first Compose App
 ![image](https://github.com/chihyeonwon/Kotlin_Compose/assets/58906858/e4dfd5c1-56f4-4dd9-b8a1-cb6f85f9b1a0)
 ```kotlin
 class MainActivity : ComponentActivity() {
