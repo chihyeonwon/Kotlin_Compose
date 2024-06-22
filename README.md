@@ -48,4 +48,54 @@ strings에 문자열을 html로 넣어서 읽을 수 있다. @Preview 미리보�
 SetContent 에서 Hello 함수와 Greeting 함수 중 Hello만 넣고 기기를 실행하면 실제 에뮬레이터에는 Hello 함수만 실행되어 보이지만
 미리보기 화면에서는 Hello와 Greeting이 모두 보이는 것을 알 수 있다.
 ```
+## Row, TextField
+```kotlin
+@Composable
+fun TextAndButton(name: MutableState<String>, nameEntered: MutableState<Boolean>) {
+    Row(modifier = Modifier.padding(top = 8.dp)) {
+        TextField(
+            value = name.value,
+            onValueChange = {
+                name.value = it
+            },
+            placeholder = {
+                Text(text = stringResource(id = R.string.hint))
+            },
+            modifier = Modifier
+                .alignByBaseline()
+                .weight(1.0F),
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(
+                autoCorrect = false,
+                capitalization = KeyboardCapitalization.Words,
+            ),
+            keyboardActions = KeyboardActions(onAny = {
+                nameEntered.value = true
+            })
+        )
+    }
+}
+```
+```
+Flutte와 유사하게 Row, Column으로 레이아웃의 배치를 한다.
+Row는 modifier 매개변수를 받고 외형과 행위에 영향을 준다.
+
+Row안에 여러 컴포저블 함수를 배치한다.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
