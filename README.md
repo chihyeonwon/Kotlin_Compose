@@ -82,7 +82,18 @@ Row는 modifier 매개변수를 받고 외형과 행위에 영향을 준다.
 
 Row안에 여러 컴포저블 함수를 배치한다.
 ```
-
+```kotlin
+  Button(modifier = Modifier
+            .alignByBaseline()
+            .padding(8.dp),
+            onClick = {
+                nameEntered.value = true
+            }) {
+            Text(text = stringResource(id = R.string.done))
+```
+```
+Row 안에 Button 컴포저블 함수를 추가했다. 버튼을 클릭하면 nameEntered의 값의 상태를 true로 변경한다.
+```
 
 
 
